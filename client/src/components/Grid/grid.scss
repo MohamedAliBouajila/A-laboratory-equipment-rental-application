@@ -1,0 +1,138 @@
+.gridViewContainer{
+    position:relative;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 5%;
+    padding: 20px 40px;
+    .gridItem{
+        background-color: #fff;
+        max-width: 300px;
+        box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.705);
+        border-radius: 13px;
+        .itemImg img{
+            width: 100%;
+            max-height: 150px;
+            border-radius: 13px 13px 0 0 ;
+        }
+        .itemDetails,.showBtn{
+            padding: 5px 15px;
+        }
+
+        .itemDetails{
+            .itemName{
+                font-weight: 800;
+            }
+
+            .available {
+                color: rgb(51, 161, 51); 
+            }
+            .outOfStock {
+                color: red;
+            }
+
+         
+
+        }
+
+        .showBtn {
+            padding-bottom: 12px;
+            .btn{
+                background-color: rgba(205, 199, 255, 0.753);
+                padding: 5px;
+                border-radius: 10px;
+                width: 50%;
+                margin: 0 auto;
+                text-align: center;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .popup{
+        position:fixed;
+        top: 5vh;
+        background-color: rgb(255, 255, 255);
+        width: 60vw;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.473),-2px -2px 5px rgba(0, 0, 0, 0.473);
+        border-radius: 15px;
+        padding: 20px;
+        .top{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 15px;
+            border-bottom: 1px solid rgb(202, 202, 202);
+            .itemPhoto img{
+                width: 150px;
+                border-radius: 50%;
+                border: 2px solid #000;
+                text-align: center;
+            }
+            .itemName{
+                font-size: 18px;
+                font-weight: 800;
+                text-align: center;
+            }
+            .itemAvailable{
+                font-size: 16px;
+                font-weight: 700;
+                color: rgb(112, 112, 112);
+            }
+        }
+        .middle{
+            padding-top:15px ;
+            .itemDetails div{
+                font-weight: 600;
+                padding-left: 15px;
+            }
+            .RentingSetting{
+                padding: 15px;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                span{
+                    font-weight: 700;
+                }
+                input {
+                    background-color: rgba(236, 234, 234, 0.945);
+                    box-shadow: 1px 1px 5px rgb(121, 127, 206);
+                    outline: none;
+                    border: none;
+                    border-radius: 5px;
+                    padding: 8px;
+                }
+
+                input[type=number] {
+                    width: 50px;
+                }
+            }
+        }
+        .bottom{
+            .Error {
+                color:orangered;
+                text-align: center;
+                font-weight: 900;
+            }
+        .ActionBtns{
+            display: flex;
+            justify-content: center;
+
+            &>* {
+                padding: 8px 17px;
+                border-radius: 12px;
+                margin: 5px;
+                cursor: pointer;
+            }
+            .rentBtn {
+                background-color: rgba(17, 202, 0, 0.986);
+                color: rgb(255, 255, 255);
+            }
+            .closeBtn {
+                background-color: rgb(226, 118, 118);
+                color: rgb(0, 0, 0);
+            }
+        }
+        }
+    }
+}

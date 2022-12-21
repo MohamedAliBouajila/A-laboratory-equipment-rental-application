@@ -1,0 +1,64 @@
+.navbar {
+    height: 50px;
+    border-bottom: 0.5px solid rgb(230,227,227);
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color:#555;    
+
+    .wrapper {
+        display: flex;
+        padding: 20px;
+        align-items: center;
+        justify-content: right;
+        width: 100%;
+
+        
+        .items {
+            display: flex;
+            align-items: center;
+            .link {
+                color:#000;
+                text-decoration: none;
+                &:hover{
+                    color: rgb(12, 24, 92);
+                }
+            }
+            .item {
+                display: flex;
+                align-items: center;
+                margin-right: 20px;
+                position: relative;
+                cursor: pointer;
+                .icon {
+                    font-size: 20px;
+                }
+
+                .avatar {
+                    height: 40px;
+                    width: 40px;
+                    border-radius: 50%;
+                }
+
+
+                .counter {
+                    background-color: red;
+                    width: 15px;
+                    height: 15px;
+                    text-align: center;
+                    color: #fff;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 10px;
+                    font-weight: bold;
+                    position: absolute;
+                    top: -5px;
+                    right: -5px;
+                }
+            }
+        }
+    }
+
+}
